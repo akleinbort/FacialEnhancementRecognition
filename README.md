@@ -45,7 +45,7 @@ Using the original model, we tested in both RGB and Grayscale to ensure the CNN 
 
 <img align="left" img src="./Figures/facetune1.png" width="120"/>
 <img align="left" img src="./Figures/facetune2.png" width="120"/>
-<br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/>
 
 
 ## CNN Models and Evaluation
@@ -68,7 +68,7 @@ Below, we can see how the loss and the accuracy fluctuated during training. We a
 This confusion matrix was built using the testing set, where we have double the amount of individuals from the enhanced dataset than the non-enhanced dataset. It looks imbalanced because this still makes for a lot more pictures of non-enhanced individuals, but the baseline for all the images is 63%.
 <br/><br/>
 <img align="left" img src="./Figures/cm1.png" width="300"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 
@@ -93,7 +93,7 @@ Here, we have a 99% accurate model with 1 false negative. This accuracy is still
 We rebuilt Model 1 in grayscale and obtained the same results. This signals that while the model may pick up different features from RGB channels they aren't necessary for a successful classification. This is particularily important if we want to use the model on pictures with heavy, bright-colored makeup or studio lights.
 
 <img align="left" img src="./Figures/cm1.png" width="300"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ### Saliency Check
 
