@@ -44,34 +44,40 @@ Model 1 was 100% accurate. As mentioned before, we excluded the pooling layer.  
 Below, we can see how the loss and the accuracy fluctuated during training and the confusion matrix for the testing set.
 
 ### Model 1 Summary
-_________________________________________________________________
-### Layer (type)                 Output Shape              Param    
-=================================================================
+##### Layer (type)                                Output Shape                                Param    
 conv2d (Conv2D)              (None, 222, 222, 32)      896       
-_________________________________________________________________
 flatten (Flatten)            (None, 1577088)           0         
-_________________________________________________________________
 dropout (Dropout)            (None, 1577088)           0         
-_________________________________________________________________
 dense (Dense)                (None, 64)                100933696 
-_________________________________________________________________
-#### dense_1 (Dense)              (None, 2)                 130       
-=================================================================
+dense_1 (Dense)              (None, 2)                 130       
+
 Total params: 100,934,722
 Trainable params: 100,934,722
 Non-trainable params: 0
 
-[plotly](https://plot.ly/~ambar132/1/)
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~ambar132/1.embed"></iframe>
+
+<img align="left" img src="./Figures/cm1.png" width="120"/>
+
 
 
 ## Black and White Test Results
 
+<img align="left" img src="./Figures/cm1.png" width="120"/>
+
+
 ## Saliency Check
 <img align="left" img src="./Figures/download.png" width="120"/>
-<img align="left" img src="./Figures/download(1).png" width="120"/>
+<img align="left" img src="./Figures/download (1).png" width="120"/>
 <br/><br/><br/><br/><br/><br/><br/><br/>
 
 # Model 2 Evaluation
+
+Here, we have a 99% accurate model with 1 false negative.
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~ambar132/3.embed"></iframe>
+
+<img align="left" img src="./Figures/cm2.png" width="120"/>
 
 # Conclusion
 
