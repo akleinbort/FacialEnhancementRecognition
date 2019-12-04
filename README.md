@@ -63,7 +63,9 @@ Below, we can see how the loss and the accuracy fluctuated during training. We a
     <a href="https://plot.ly/~ambar132/1/?share_key=uySpvThGBhuc9O672Crozt" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img src="https://plot.ly/~ambar132/1.png?share_key=uySpvThGBhuc9O672Crozt" alt="Plot 1" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     
 </div>
+
 *Click on the figure for zooming in or out and other interactive features*
+
 <br/><br/>
 This confusion matrix was built using the testing set, where we have double the amount of individuals from the enhanced dataset than the non-enhanced dataset. It looks imbalanced because this still makes for a lot more pictures of non-enhanced individuals, but the baseline for all the images is 63%.
 <br/><br/>
@@ -79,7 +81,9 @@ Here, we have a 99% accurate model with 1 false negative. This accuracy is still
 <div>
     <a href="https://plot.ly/~ambar132/3/?share_key=mGRIZ4YmmBFBr5tnAlfVPZ" target="_blank" title="Plot 3" style="display: block; text-align: center;"><img src="https://plot.ly/~ambar132/3.png?share_key=mGRIZ4YmmBFBr5tnAlfVPZ" alt="Plot 3" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
 </div>
+
 *Click on the figure for zooming in or out and other interactive features*
+
 <br/>
 
 <img align="left" img src="./Figures/cm2.png" width="300"/>
