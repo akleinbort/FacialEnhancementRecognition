@@ -66,7 +66,7 @@ Below, we can see how the loss and the accuracy fluctuated during training. We a
 
 *Click on the figure for zooming in or out and other interactive features*
 
-<br/><br/>
+<br/>
 This confusion matrix was built using the testing set, where we have double the amount of individuals from the enhanced dataset than the non-enhanced dataset. It looks imbalanced because this still makes for a lot more pictures of non-enhanced individuals, but the baseline for all the images is 63%.
 <br/><br/>
 <img align="left" img src="./Figures/cm1.png" width="300"/>
