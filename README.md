@@ -1,4 +1,10 @@
-# Contents
+# README Contents
+ - [Problem Statement](#Problem-Statement)
+ - [Executive Summary](#Executive-Summary)
+ - [Sample Images](#Sample-Images)
+ - [CNN Models and Evaluation](#CNN-Modeling-and-Evaluation)
+ - [Conclusion](#Conclusion)
+ - [Recommendations](#Recommendations)
 
 # Problem Statement
 
@@ -11,7 +17,7 @@ Knowing if a face has been digitally enhanced can be difficult in today’s tech
 The images of non-photoshopped faces were obtained from the [FEI Face Database](https://fei.edu.br/~cet/facedatabase.html), and it includes 1400 pictures (100 individuals, half female, half male). Different images of the same individual are contained within each modeling set (training, validation and testing sets).
 
 
-The images of photoshopped faces were compiled from several datasets in order to include different types of enhancements. The first dataset is the [Real and Fake Face Detection Data](https://www.kaggle.com/ciplab/real-and-fake-face-detection/data), where faces are constructed using individual pieces from several faces (faces that people labeled as ‘easy to recognize it is photoshopped’ were excluded). Next, we included images from a Google search of Facetune, since this is the most popular face-editing app used by influencers on social media as well as some celebrities. Both of these photoshopped-face sets together are a total of 779 images, where each individual is unique.
+The images of photoshopped faces were compiled from several datasets in order to include different types of enhancements. The first dataset is the [Real and Fake Face Detection Data](https://www.kaggle.com/ciplab/real-and-fake-face-detection/data), where faces are constructed using individual pieces from several faces (faces that people labeled as ‘easy to recognize it is photoshopped’ were excluded). Next, we included images from a Google search of Facetune, since this is the most popular face-editing app used by influencers on social media as well as some celebrities. Both of these photoshopped-face sets together are a total of 791 images, where each individual is unique.
 
 **Models**
 
@@ -37,7 +43,9 @@ Using the original model, we tested in both RGB and Grayscale to ensure the CNN 
 <br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-# Model 1 Evaluation
+# CNN Models and Evaluation
+
+## Model 1 Evaluation
 
 Model 1 was 100% accurate. As mentioned before, we excluded the pooling layer.  The reasoning behind this was that the "skin-bluring" effect that is almost always present in enhanced faces and pooling layers both average pixels, undermining the presence of this type of facial edit. 
 
@@ -48,36 +56,46 @@ Below, we can see how the loss and the accuracy fluctuated during training and t
     <a href="https://plot.ly/~ambar132/1/?share_key=uySpvThGBhuc9O672Crozt" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img src="https://plot.ly/~ambar132/1.png?share_key=uySpvThGBhuc9O672Crozt" alt="Plot 1" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     
 </div>
-
 ##### Click on the figure for zooming in or out and other interactive features
 
+This confusion matrix was built using the testing set, where we have double the amount of individuals from the enhanced dataset than the non-enhanced dataset. It looks imbalanced because this still makes for a lot more pictures of non-enhaced individuals, but the baseline for all the images is 63%.
 
 <img align="left" img src="./Figures/cm1.png" width="300"/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 
-## Black and White Test Results
 
-<img align="left" img src="./Figures/cm1.png" width="300"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-## Saliency Check
-<img align="left" img src="./Figures/download.png" width="120"/>
-<img align="left" img src="./Figures/download (1).png" width="120"/>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-# Model 2 Evaluation
+## Model 2 Evaluation
 
 Here, we have a 99% accurate model with 1 false negative.
 
 <div>
     <a href="https://plot.ly/~ambar132/3/?share_key=mGRIZ4YmmBFBr5tnAlfVPZ" target="_blank" title="Plot 3" style="display: block; text-align: center;"><img src="https://plot.ly/~ambar132/3.png?share_key=mGRIZ4YmmBFBr5tnAlfVPZ" alt="Plot 3" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
 </div>
-
 ##### Click on the figure for zooming in or out and other interactive features
 
 <img align="left" img src="./Figures/cm2.png" width="300"/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+## Black and White Test Results
+
+We rebuilt Model 1 in grayscale and obtained the same results. This signals that while the model may pick up different features from RGB channels they aren't necessary for a succesful classification.
+
+<img align="left" img src="./Figures/cm1.png" width="300"/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+## Saliency Check
+
+Saliency refers to which pixels stand out in an image. Here, we have a simple saliency map in order to explore what the model is likely to be picking up as important features. Most of what stands out is the skin, confirming the exlusion of the pooling layer was relevant. 
+
+<img align="left" img src="./Figures/download.png" width="120"/>
+<img align="left" img src="./Figures/download (1).png" width="120"/>
+<br/><br/><br/><br/><br/><br/>
+
+With more time, we could map the saliency that our model detects at every layer, as we discuss in the Future Directions section.
+
+
 
 # Conclusion
 
