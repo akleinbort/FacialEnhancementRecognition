@@ -22,7 +22,7 @@ Using the original model, we tested in both RGB and Grayscale to ensure the CNN 
 # Sample Images
 - *Sample Non-Enhanced Individual*
  
-![Sample Non-Enhanced Individual](../Figures/examples_variations.jpg)
+![Sample Non-Enhanced Individual](./Figures/examples_variations.jpg)
 
 - *Sample Fake Faces*
 
