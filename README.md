@@ -15,7 +15,7 @@ The images of photoshopped faces were compiled from several datasets in order to
 
 **Models**
 
-Convolutional Neural Networks (CNN) were developed to make this classification. We were able to achieve 100% accuracy by removing the presence of a pooling layer, at the cost of creating a slow model. In turn, we created a second model where a pooling layer was incorporated. It was 6 times faster and had an accuracy of 99%. 
+Convolutional Neural Networks (CNN) were developed to make this classification. We were able to achieve 100% accuracy by removing the presence of a pooling layer, at the cost of creating a slow model.In turn, we created a second model where a pooling layer was incorporated. It was 6 times faster and had an accuracy of 99%. 
 
 Using the original model, we tested in both RGB and Grayscale to ensure the CNN was not relying solely on color and light but rather the shape of the face. This was necessary because the dataset did not include non-enhanced images with studio lightning (these couldn't be found in large quantities). 100% accuracy was reached again, showing that the model may benefit from color but does not rely on it.
 
@@ -26,24 +26,49 @@ Using the original model, we tested in both RGB and Grayscale to ensure the CNN 
 
 - *Sample Fake Faces*
 
-<img align="left" img src="../Figures/mid_123_1111.jpg" alt="drawing" width="120" />
-<img align="left" img src="../Figures/hard_7_1111.jpg" alt="drawing" width="120" />                    
+<img align="left" img src="./Figures/mid_123_1111.jpg" alt="drawing" width="120" />
+<img align="left" img src="./Figures/hard_7_1111.jpg" alt="drawing" width="120" />                    
 <br/><br/><br/><br/><br/><br/><br/><br/>
 
 - *Sample Facetuned Faces*
 
-<img align="left" img src="../Figures/Screenshot Capture - 2019-11-18 - 14-06-25.png" width="120"/>
-<img align="left" img src="../Figures/Screenshot Capture - 2019-11-18 - 13-51-40.png" width="120"/>
+<img align="left" img src="./Figures/Screenshot Capture - 2019-11-18 - 14-06-25.png" width="120"/>
+<img align="left" img src="./Figures/Screenshot Capture - 2019-11-18 - 13-51-40.png" width="120"/>
 <br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 # Model 1 Evaluation
 
+Model 1 was 100% accurate. As mentioned before, we excluded the pooling layer.  The reasoning behind this was that the "skin-bluring" effect that is almost always present in enhanced faces and pooling layers both average pixels, undermining the presence of this type of facial edit. 
+
+Below, we can see how the loss and the accuracy fluctuated during training and the confusion matrix for the testing set.
+
+### Model 1 Summary
+_________________________________________________________________
+### Layer (type)                 Output Shape              Param    
+=================================================================
+conv2d (Conv2D)              (None, 222, 222, 32)      896       
+_________________________________________________________________
+flatten (Flatten)            (None, 1577088)           0         
+_________________________________________________________________
+dropout (Dropout)            (None, 1577088)           0         
+_________________________________________________________________
+dense (Dense)                (None, 64)                100933696 
+_________________________________________________________________
+#### dense_1 (Dense)              (None, 2)                 130       
+=================================================================
+Total params: 100,934,722
+Trainable params: 100,934,722
+Non-trainable params: 0
+
+[plotly](https://plot.ly/~ambar132/1/)
+
+
 ## Black and White Test Results
 
 ## Saliency Check
-<img align="left" img src="../Figures/download.png" width="120"/>
-<img align="left" img src="../Figures/download(1).png" width="120"/>
+<img align="left" img src="./Figures/download.png" width="120"/>
+<img align="left" img src="./Figures/download(1).png" width="120"/>
 <br/><br/><br/><br/><br/><br/><br/><br/>
 
 # Model 2 Evaluation
