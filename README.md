@@ -43,28 +43,20 @@ Model 1 was 100% accurate. As mentioned before, we excluded the pooling layer.  
 
 Below, we can see how the loss and the accuracy fluctuated during training and the confusion matrix for the testing set.
 
-### Model 1 Summary
-##### Layer (type)                                Output Shape                                Param    
-conv2d (Conv2D)              (None, 222, 222, 32)      896       
-flatten (Flatten)            (None, 1577088)           0         
-dropout (Dropout)            (None, 1577088)           0         
-dense (Dense)                (None, 64)                100933696 
-dense_1 (Dense)              (None, 2)                 130       
 
-Total params: 100,934,722
-Trainable params: 100,934,722
-Non-trainable params: 0
+<div>
+    <a href="https://plot.ly/~ambar132/1/?share_key=uySpvThGBhuc9O672Crozt" target="_blank" title="Plot 1" style="display: block; text-align: center;"><img src="https://plot.ly/~ambar132/1.png?share_key=uySpvThGBhuc9O672Crozt" alt="Plot 1" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="ambar132:1" sharekey-plotly="uySpvThGBhuc9O672Crozt" src="https://plot.ly/embed.js" async></script>
+</div>
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~ambar132/1.embed"></iframe>
-
-<img align="left" img src="./Figures/cm1.png" width="120"/>
-
+<img align="left" img src="./Figures/cm1.png" width="300"/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
 
 ## Black and White Test Results
 
-<img align="left" img src="./Figures/cm1.png" width="120"/>
-
+<img align="left" img src="./Figures/cm1.png" width="300"/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
 ## Saliency Check
 <img align="left" img src="./Figures/download.png" width="120"/>
@@ -77,7 +69,7 @@ Here, we have a 99% accurate model with 1 false negative.
 
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~ambar132/3.embed"></iframe>
 
-<img align="left" img src="./Figures/cm2.png" width="120"/>
+<img align="left" img src="./Figures/cm2.png" width="300"/>
 
 # Conclusion
 
