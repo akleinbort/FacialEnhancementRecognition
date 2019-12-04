@@ -1,4 +1,4 @@
-# Digital Facial Enhancement Recognition
+# Facial Enhancement Recognition
 
 ## README Contents
  - [Problem Statement](#Problem-Statement)
@@ -10,21 +10,19 @@
 
 ## Problem Statement
 
-Knowing if a face has been digitally enhanced can be difficult in today’s tech-driven world, creating a spectrum of problems that ranges from fake-news to social-media-fueled mental illness. Here, we develop a classification model to predict if a face has been digitally enhanced, whether it be with touch-ups, facial part replacements (i.e nose, eyes, etc.) or shape-correcting edits (i.e. straightening teeth, changing nose size).
+Knowing if a face has been digitally enhanced can be difficult in today’s tech-driven world, creating a spectrum of problems that ranges from fake-news to social-media-fueled mental illness. Here, we develop a classification model to predict if a face has been digitally enhanced, whether it be with touch-ups, facial part replacements (i.e nose, eyes, etc.) or shape-correcting edits (i.e. straightening teeth, changing nose size, etc.).
 
 ## Executive Summary
 
 **Data**
 
-The images of non-photoshopped faces were obtained from the [FEI Face Database](https://fei.edu.br/~cet/facedatabase.html), and it includes 1400 pictures (100 individuals, half female, half male). Different images of the same individual are contained within each modeling set (training, validation and testing sets).
+The images of non-photoshopped faces were obtained from the [FEI Face Database](https://fei.edu.br/~cet/facedatabase.html), and it includes 1400 pictures (100 individuals, half female, half male). Different images of the same individual are contained within each modeling set (training, validation or testing).
 
 The images of photoshopped faces were compiled from several datasets in order to include different types of enhancements. The first dataset is the [Real and Fake Face Detection Data](https://www.kaggle.com/ciplab/real-and-fake-face-detection/data), where faces are constructed using individual pieces from several faces (faces that people labeled as ‘easy to recognize it is photoshopped’ were excluded). Next, we included images from a Google search of Facetune, since this is the most popular face-editing app used by influencers on social media as well as some celebrities. Both of these photoshopped-face sets together are a total of 791 images, where each individual is unique. 
 
 This gives us a baseline accuracy of 63%. 
 
-All images were standarized and re-sized to 224 x 224. 
-
-We note that the inclusivity level of the dataset could be improved, particularly for non-binary people.
+All images were standarized and re-sized to 224 x 224, and we note that the inclusivity level of the dataset could be improved, particularly for non-binary people.
 
 **Models and Results**
 
@@ -47,7 +45,7 @@ Using the original model, we tested in both RGB and Grayscale to ensure the CNN 
 
 <img align="left" img src="./Figures/facetune1.png" width="120"/>
 <img align="left" img src="./Figures/facetune2.png" width="120"/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/>
 
 
 ## CNN Models and Evaluation
@@ -92,7 +90,7 @@ Here, we have a 99% accurate model with 1 false negative. This accuracy is still
 
 ### Black and White Test Results
 
-We rebuilt Model 1 in grayscale and obtained the same results. This signals that while the model may pick up different features from RGB channels they aren't necessary for a successful classification. This is particularily important if we want to use the model on pictures with heavy, bright-colored makeup.
+We rebuilt Model 1 in grayscale and obtained the same results. This signals that while the model may pick up different features from RGB channels they aren't necessary for a successful classification. This is particularily important if we want to use the model on pictures with heavy, bright-colored makeup or studio lights.
 
 <img align="left" img src="./Figures/cm1.png" width="300"/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -105,7 +103,7 @@ Saliency refers to which pixels stand out in an image. Here, we have a simple sa
 <img align="left" img src="./Figures/saliencymap.png" width="120"/>
 <br/><br/><br/><br/><br/><br/>
 
-With more time, we could map the saliency that our model detects at every layer, as we discuss in the Recommendations section.
+With more time, we could map the saliency that our model detects at every layer, as we discuss in the Conclusion & Future Directions section.
 
 
 ## Conclusion & Future Directions
