@@ -39,7 +39,7 @@ Using the original model, we tested in both RGB and Grayscale to ensure the CNN 
 
 <img align="left" img src="./Figures/mid.jpg" alt="drawing" width="120" />
 <img align="left" img src="./Figures/hard.jpg" alt="drawing" width="120" />                    
-<br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/>
 
 - *Sample Facetuned Faces*
 
