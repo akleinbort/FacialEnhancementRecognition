@@ -5,7 +5,7 @@
  - [Executive Summary](#Executive-Summary)
  - [Sample Images](#Sample-Images)
  - [CNN Models and Evaluation](#CNN-Modeling-and-Evaluation)
- - [Conclusion & Future Directions](#Conclusion-&-Future-Directions)
+ - [Conclusion and Future Directions](#Conclusion-and-Future-Directions)
  - [Acknowledgements](#Acknowledgements)
 
 ## Problem Statement
@@ -103,10 +103,10 @@ Saliency refers to which pixels stand out in an image. Here, we have a simple sa
 <img align="left" img src="./Figures/saliencymap.png" width="120"/>
 <br/><br/><br/><br/><br/><br/>
 
-With more time, we could map the saliency that our model detects at every layer, as we discuss in the Conclusion & Future Directions section.
+With more time, we could map the saliency that our model detects at every layer, as we discuss in the Conclusion and Future Directions section.
 
 
-## Conclusion & Future Directions
+## Conclusion and Future Directions
 
 Both of our models predict whether or not a face has been digitally enhanced successfully. **Model 1 does this with 100% accuracy** and a binary cross entropy loss of practically 0, in color or in black and white. This is important because the non-enhanced face pictures' colors were less bright due to the lack of studio lighting, which might not always be the case. **Model 2 reaches 99% accuracy**, and is 6 times faster thanks to the pooling layer. These percentages are well above the **63% baseline**. We could deploy either of these models to detect fake-news that involve placing someone's face on a photograph, or to enable social media users to check who has edited their pictures. 
 
