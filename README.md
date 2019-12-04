@@ -59,12 +59,12 @@ Below, we can see how the loss and the accuracy fluctuated during training and t
 ## Black and White Test Results
 
 <img align="left" img src="./Figures/cm1.png" width="300"/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 ## Saliency Check
 <img align="left" img src="./Figures/download.png" width="120"/>
 <img align="left" img src="./Figures/download (1).png" width="120"/>
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 # Model 2 Evaluation
 
@@ -72,12 +72,12 @@ Here, we have a 99% accurate model with 1 false negative.
 
 <div>
     <a href="https://plot.ly/~ambar132/3/?share_key=mGRIZ4YmmBFBr5tnAlfVPZ" target="_blank" title="Plot 3" style="display: block; text-align: center;"><img src="https://plot.ly/~ambar132/3.png?share_key=mGRIZ4YmmBFBr5tnAlfVPZ" alt="Plot 3" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="ambar132:3" sharekey-plotly="mGRIZ4YmmBFBr5tnAlfVPZ" src="https://plot.ly/embed.js" async></script>
 </div>
 
 ##### Click on the figure for zooming in or out and other interactive features
 
 <img align="left" img src="./Figures/cm2.png" width="300"/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
 # Conclusion
 
